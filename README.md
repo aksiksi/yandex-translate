@@ -11,9 +11,15 @@ A thin Python wrapper around the Yandex Translation API.
 ## Usage
 ```python
 import yandex
+
 t = yandex.Translator(api_key='TEST', from_lang='en', to_lang='de')
 t.strings.append('My name is Joe.')
-t.translate()
-print t.translated # Shows returned strings
+
+t.update_languages()
+print t.languages # Show supported language pairs
+
+t.translate() # Translate current strings
+print t.translated
+
 translation_dict = t.make_dict() # For easier use later on
 ```
