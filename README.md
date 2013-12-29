@@ -10,9 +10,9 @@ A thin Python wrapper around the Yandex Translation API.
 
 ## Usage
 ```python
-import yandex
+from yandex import YandexTranslator
 
-t = yandex.Translator(api_key='TEST', from_lang='en', to_lang='de')
+t = YandexTranslator(api_key='TEST', from_lang='en', to_lang='de')
 t.strings.append('My name is Joe.')
 
 t.update_languages()
